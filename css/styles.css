@@ -1,0 +1,191 @@
+:root {
+  --primary-yellow: #ffd602;
+  --primary-red: #d5040a;
+  --primary-blue: #035cb6;
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url("./assets/font/Rubik-Italic-VariableFont_wght.ttf");
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* Columna izquierda que simula nav, main y footer */
+.left-column {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Columna derecha que sería el aside */
+.right-column {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-yellow);
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  animation: 2s navbar 0.5s ease-in-out;
+}
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.navbar__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar__content img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.navbar__content ul {
+  width: 450px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__content li a {
+  text-decoration: none;
+  color: var(--primary-red);
+  font-weight: 700;
+}
+
+/* Main Content */
+.main-content {
+  height: 50%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer div {
+  background: var(--primary-blue);
+  width: 180px;
+  height: 80%;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer div img {
+  width: 165px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.footer div img:hover {
+  transform: scale(1.7);
+}
+
+/* Side content (right column) */
+.side-content {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: appear 1s ease-in-out;
+}
+
+.side-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.side-content img {
+  max-height: 80%;
+  max-width: 90%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
