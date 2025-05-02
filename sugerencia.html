@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/lego.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Sugerencia</title>
+</head>
+
+<body>
+    <div class="page">
+        <section class="container">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="left-column">
+                <!-- NAVBAR -->
+                <nav class="navbarSF">
+                    <div class="navbar__content">
+                        <img src="./assets/img/lego.png" alt="lego logo" />
+                        <ul>
+                            <li><a href="./index.html">HOME</a></li>
+                            <li>
+                                <a href=" #">CONTACTO</a>
+                                <ul>
+                                    <li><a href="./formulario.html">Formulario</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">OPINIÓN</a>
+                                <ul>
+                                    <li><a href="#">Sugerencias</a></li>
+                                    <li><a href="./reclamacion.html">Reclamaciones</a></li>
+                                    <li>
+                                        <a href="#">Valoraciones</a>
+                                        <ul>
+                                            <li><a href="#">Productos</a></li>
+                                            <li><a href="#">Atención al cliente</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- CONTENIDO FORMULARIO -->
+                <section class="main-formulario">
+                    <p>Tu opinión cuenta</p>
+                    <h2>Formulario de Sugerencias</h2>
+
+                    <form class="formulario" action="mailto:raul@unir.com" method="get">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Escribe tu nombre" required />
+
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="text" id="correo" placeholder="ejemplo@correo.com" required />
+
+                        <legend class="legend-form">Tipo de sugerencia</legend>
+                        <label class="labelRadio"><input type="radio" name="tipo" value="producto" required />
+                            Producto</label><br />
+                        <label class="labelRadio"><input type="radio" name="tipo" value="servicio" />
+                            Servicio</label><br />
+                        <label class="labelRadio"><input type="radio" name="tipo" value="otro" /> Otro</label>
+
+                        <legend class="legend-form">Comentarios:</legend>
+                        <textarea placeholder="Escribe aquí tu opinión" maxlength="16"></textarea>
+
+                        <div class="form-buttons">
+                            <input type="submit" value="Enviar" />
+                            <input type="reset" value="Borrar" />
+                        </div>
+                    </form>
+                </section>
+
+                <!-- FOOTER -->
+            </div>
+            <!-- COLUMNA DERECHA -->
+            <div class="right-column">
+                <div class="color-strip"></div>
+                <section class="side-content">
+                    <img src="./assets/img/batman.png" alt="batman" />
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

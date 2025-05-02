@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/lego.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="page">
+        <section class="container">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="left-column">
+                <!-- NAVBAR -->
+                <nav class="navbarSF">
+                    <div class="navbar__content">
+                        <img src="./assets/img/lego.png" alt="lego logo" />
+                        <ul>
+                            <li><a href="./index.html">HOME</a></li>
+                            <li>
+                                <a href=" #">CONTACTO</a>
+                                <ul>
+                                    <li><a href="./formulario.html">Formulario</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">OPINIÓN</a>
+                                <ul>
+                                    <li><a href="./sugerencia.html">Sugerencias</a></li>
+                                    <li><a href="./reclamacion.html">Reclamaciones</a></li>
+                                    <li>
+                                        <a href="#">Valoraciones</a>
+                                        <ul>
+                                            <li><a href="#">Productos</a></li>
+                                            <li><a href="#">Atención al cliente</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- CONTENIDO FORMULARIO -->
+                <section class="main-formulario">
+                    <p>Contáctanos</p>
+                    <h2>Formulario de contacto</h2>
+                    <form class="formulario" action="mailto:raul@unir.com" method="get">
+                        <legend class="legend-form">Datos Personales:</legend>
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Escribe tu nombre" required />
+                        <label> Apellidos</label>
+                        <input type="text" placeholder="Escribe tus apellidos" required />
+                        <label>Nacido/a en:</label>
+                        <input type="text" placeholder="Escribe tu lugar de nacimiento" required />
+
+                        <label>DNI</label>
+                        <input type="number" placeholder="Escribe tu DNI" />
+
+                        <label>Dirección (Calle, plaza y número):</label>
+                        <input type="text" placeholder="Escribe el nombre de tu dirección" />
+
+                        <label>Código postal:</label>
+                        <input type="number" />
+
+                        <label> Localidad:</label>
+                        <input type="text" placeholder="Escribe tu localidad" required />
+
+                        <legend class="legend-form">Provincia</legend>
+                        <input list="lista-provincia" id="provincia" name="provincia"
+                            placeholder="Selecciona una provincia" required />
+                        <datalist id="lista-provincia">
+                            <option value="Álava"></option>
+                            <option value="Albacete"></option>
+                            <option value="Alicante"></option>
+                            <option value="Almería"></option>
+                            <option value="Asturias"></option>
+                            <option value="Ávila"></option>
+                            <option value="Badajoz"></option>
+                        </datalist>
+                        <label>Teléfono:</label>
+                        <input type="number" />
+                        <div class="form-buttons">
+                            <input type="submit" value="Enviar" />
+                        </div>
+                    </form>
+                </section>
+                <!-- FOOTER -->
+            </div>
+            <!-- COLUMNA DERECHA -->
+            <div class="right-column">
+                <div class="color-strip"></div>
+                <section class="side-content">
+                    <img src="./assets/img/robin.png" alt="robin" />
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
