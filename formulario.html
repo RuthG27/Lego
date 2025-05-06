@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/img/lego.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Formulario</title>
 </head>
 
@@ -17,33 +18,41 @@
             <div class="left-column">
                 <!-- NAVBAR -->
                 <nav class="navbarSF">
-                    <div class="navbar__content">
-                        <img src="./assets/img/lego.png" alt="lego logo" />
-                        <ul>
-                            <li><a href="./index.html">HOME</a></li>
-                            <li>
-                                <a href=" #">CONTACTO</a>
-                                <ul>
-                                    <li><a href="./formulario.html">Formulario</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">OPINIÓN</a>
-                                <ul>
-                                    <li><a href="./sugerencia.html">Sugerencias</a></li>
-                                    <li><a href="./reclamacion.html">Reclamaciones</a></li>
-                                    <li>
-                                        <a href="#">Valoraciones</a>
-                                        <ul>
-                                            <li><a href="#">Productos</a></li>
-                                            <li><a href="#">Atención al cliente</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                    <input type="checkbox" id="ckbox">
+                    <label for="ckbox" class="drawer">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </label>
+                <div class="navbar__content">
+                    <img src="./assets/img/lego.png" alt="lego logo" />
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li>
+                            <a href="#">NOSOTROS</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Equipo</a>
+                                    <ul>
+                                        <li><a href="./equipo.html">Fundadores</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">CONTACTO</a>
+                            <ul>
+                                <li><a href="./formulario.html">Formulario</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">OPINIÓN</a>
+                            <ul>
+                                <li><a href="./sugerencia.html">Sugerencias</a></li>
+                                <li><a href="./reclamacion.html">Reclamaciones</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
                 <!-- CONTENIDO FORMULARIO -->
                 <section class="main-formulario">
@@ -59,13 +68,13 @@
                         <input type="text" placeholder="Escribe tu lugar de nacimiento" required />
 
                         <label>DNI</label>
-                        <input type="number" placeholder="Escribe tu DNI" />
+                        <input type="tel" placeholder="Escribe tu DNI" />
 
                         <label>Dirección (Calle, plaza y número):</label>
                         <input type="text" placeholder="Escribe el nombre de tu dirección" />
 
                         <label>Código postal:</label>
-                        <input type="number" />
+                        <input type="tel" placeholder="Escribe tu código postal" />
 
                         <label> Localidad:</label>
                         <input type="text" placeholder="Escribe tu localidad" required />
@@ -83,7 +92,7 @@
                             <option value="Badajoz"></option>
                         </datalist>
                         <label>Teléfono:</label>
-                        <input type="number" />
+                        <input type="tel" placeholder="Escribe tu teléfono"/>
                         <div class="form-buttons">
                             <input type="submit" value="Enviar" />
                         </div>

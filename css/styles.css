@@ -15,13 +15,13 @@ body {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow: hidden;
+  /*height: 100vh;*/
+  /*overflow: hidden;*/
 }
 
 .page {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 }
 
@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* Columna izquierda que simula nav, main y footer */
@@ -301,7 +301,7 @@ label {
 }
 
 input[type="text"],
-input[type="number"],
+input[type="tel"],
 input[list] {
   padding: 8px;
   font-size: 1rem;
@@ -343,4 +343,146 @@ textarea {
   font-size: 1rem;
   border: 1px solid #bbb;
   border-radius: 6px;
+}
+#ckbox {
+  display: none;
+}
+.drawer {
+  display: none;
+  cursor: pointer;
+}
+.navbar__content ul {
+  display: flex; 
+}
+/* === Responsive Styles === */
+/* 1) Tablet y pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+  .drawer {
+    display: block;
+    font-size: 1.8rem;
+    padding: 0 20px;
+  }
+  /* Pasar de dos columnas a columna única */
+  .container {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    width: 100%;
+    height: auto;
+  }
+  .navbar__content ul {
+    display: none;              /* importante: lo escondo */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  .navbar__content li ul {
+    position: static;
+    box-shadow: none;
+    background: none;
+  }
+  /* Ajustes del footer */
+  .footer {
+    flex-direction: column;
+    height: auto;
+    border-radius: 0;
+  }
+  .footer div {
+    width: 60%;
+    margin: 10px auto;
+  }
+  /* Imagen lateral más pequeña */
+  .side-content {
+    margin-top: 20px;
+  }
+}
+#ckbox:checked ~ .navbar__content ul {
+  display: flex;
+}
+.image {
+  display: none;
+}
+footer {
+  text-align: center;
+}
+nav {
+  justify-content: flex-start;
+}
+/* 1) padres (que tienen sub-<ul>) en gris y no clicables */
+.navbar__content li:has(> ul) > a {
+  color: #555;
+  font-weight: 700;
+  pointer-events: none;
+  position: relative;
+  padding-right: 1.5em;
+}
+.navbar__content li:has(> ul) > a::after {
+  content: "▾";
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+/* 2) hijos indentados para que destaquen como enlaces “reales” */
+.navbar__content li ul li > a {
+  padding-left: 1.5em;
+  font-weight: 600;
+  color: var(--primary-red);
+}
+/* 2) Móviles (hasta 480px) */
+@media (max-width: 480px) {
+  .drawer {
+    font-size: 2rem;
+    padding: 0 15px;
+  }
+  .navbar__content ul li {
+    width: 100%;
+  }
+  .navbar__content ul li a {
+    padding: 12px 20px;
+  }
+}
+  /* Texto principal más legible */
+  .main-content h1 {
+    font-size: 2rem;
+  }
+  .main-content p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  /* Formularios: reducir paddings y fuentes */
+  .main-formulario {
+    padding: 0 20px;
+  }
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+  .form-buttons input {
+    width: 100%;
+    margin: 10px 0;
+  }
+  /* Footer: iconos más pequeños */
+  .footer div img {
+    width: 80px;
+}
+.navbar__content ul li a {
+  font-size: 1rem;
+}
+/* 3) Ajustes generales: imágenes y vídeos fluidos */
+img,
+.side-content img,
+.footer div img {
+  max-width: 100%;
+  height: auto;
 }
