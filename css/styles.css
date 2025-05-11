@@ -15,8 +15,6 @@ body {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  /*height: 100vh;*/
-  /*overflow: hidden;*/
 }
 
 .page {
@@ -74,7 +72,7 @@ body {
   animation: 2s navbar 0.5s ease-in-out;
 }
 .navbarSF {
-  height: 20%;
+  height: 10%;
   display: flex;
   align-items: center;
   padding-left: 80px;
@@ -352,7 +350,7 @@ textarea {
   cursor: pointer;
 }
 .navbar__content ul {
-  display: flex; 
+  display: flex;
 }
 /* === Responsive Styles === */
 /* 1) Tablet y pantallas medianas (hasta 1024px) */
@@ -393,14 +391,21 @@ textarea {
     flex-direction: column;
     height: auto;
     border-radius: 0;
+    margin-top: 20px;
   }
   .footer div {
     width: 60%;
     margin: 10px auto;
   }
   /* Imagen lateral más pequeña */
-  .side-content {
-    margin-top: 20px;
+  .side-content img {
+    display: none;
+  }
+  .side-content p {
+    display: none;
+  }
+  .right-column > .color-strip {
+    display: none;
   }
 }
 #ckbox:checked ~ .navbar__content ul {
@@ -439,6 +444,9 @@ nav {
 }
 /* 2) Móviles (hasta 480px) */
 @media (max-width: 480px) {
+  .main-content {
+    margin-top: 30px;
+  }
   .drawer {
     font-size: 2rem;
     padding: 0 15px;
@@ -450,31 +458,31 @@ nav {
     padding: 12px 20px;
   }
 }
-  /* Texto principal más legible */
-  .main-content h1 {
-    font-size: 2rem;
-  }
-  .main-content p {
-    font-size: 1rem;
-    padding: 0 20px;
-  }
-  /* Formularios: reducir paddings y fuentes */
-  .main-formulario {
-    padding: 0 20px;
-  }
-  input[type="text"],
-  input[type="number"],
-  textarea {
-    font-size: 0.9rem;
-    padding: 6px;
-  }
-  .form-buttons input {
-    width: 100%;
-    margin: 10px 0;
-  }
-  /* Footer: iconos más pequeños */
-  .footer div img {
-    width: 80px;
+/* Texto principal más legible */
+.main-content h1 {
+  font-size: 2rem;
+}
+.main-content p {
+  font-size: 1rem;
+  padding: 0 20px;
+}
+/* Formularios: reducir paddings y fuentes */
+.main-formulario {
+  padding: 0 20px;
+}
+input[type="text"],
+input[type="number"],
+textarea {
+  font-size: 0.9rem;
+  padding: 6px;
+}
+.form-buttons input {
+  width: 100%;
+  margin: 10px 0;
+}
+/* Footer: iconos más pequeños */
+.footer div img {
+  width: 80px;
 }
 .navbar__content ul li a {
   font-size: 1rem;
